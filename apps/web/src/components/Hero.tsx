@@ -186,6 +186,9 @@ export default function Hero() {
                 src="/hero-aesthetic.png" 
                 alt="Happy Student with Storage" 
                 className="w-full h-full object-cover"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
               
               {/* Overlay gradient */}
