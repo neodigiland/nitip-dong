@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply bg-background-light text-text-main font-body selection:bg-primary/30 selection:text-forest dark:bg-background-dark dark:text-gray-100 dark:selection:bg-primary/30 dark:selection:text-primary;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-forest tracking-tight;
+    letter-spacing: -0.02em;
+  }
+  
+  /* Premium breathable text */
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Premium Glassmorphism Cards */
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/30 shadow-glass;
+  }
+  
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/40 shadow-soft rounded-3xl;
+  }
+  
+  .glass-card-hover {
+    @apply glass-card transition-all duration-500 hover:shadow-soft-lg hover:-translate-y-1 hover:bg-white/80;
+  }
+  
+  /* Premium Button Styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-forest font-bold rounded-2xl shadow-soft transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5 hover:bg-primary-dark;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-white/80 backdrop-blur-sm text-forest font-bold rounded-2xl border border-forest/10 shadow-glass transition-all duration-300 hover:border-primary/50 hover:bg-white hover:-translate-y-0.5;
+  }
+}
+
+@layer utilities {
+  /* Legacy glass support */
+  .glass-hover {
+    @apply hover:bg-white/80 transition-all duration-300 dark:hover:bg-slate-900/80;
+  }
+
+  /* Premium gradient text */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-forest to-forest-light;
+  }
+  
+  .text-gradient-mint {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-300;
+  }
+  
+  .text-gradient-premium {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-forest via-forest-light to-primary;
+  }
+  
+  /* Floating Animation Classes */
+  .animate-float-1 {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-float-2 {
+    animation: float 7s ease-in-out infinite 1s;
+  }
+  
+  .animate-float-3 {
+    animation: float 8s ease-in-out infinite 2s;
+  }
+  
+  /* Shimmer border effect for popular cards */
+  .shimmer-border {
+    position: relative;
+  }
+  
+  .shimmer-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.5), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  /* Focus ring for interactions */
+  .focus-ring-mint {
+    @apply focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:outline-none;
+  }
+  
+  .glow-ring {
+    @apply ring-2 ring-primary/40 ring-offset-2 ring-offset-background-light;
+  }
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    @apply bg-forest/20 rounded-full hover:bg-forest/30 border-2 border-transparent bg-clip-content;
+}
+
+/* Ticket Styles */
+.ticket-perforation {
+  position: relative;
+  background-image: linear-gradient(to right, #cbd5e1 50%, rgba(255,255,255,0) 0%);
+  background-position: bottom;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+}
+.dark .ticket-perforation {
+  background-image: linear-gradient(to right, #334155 50%, rgba(255,255,255,0) 0%);
+}
+
+.half-circle {
+  position: absolute;
+  top: -12px;
+  width: 24px;
+  height: 24px;
+  background-color: #F8FAFC;
+  border-radius: 50%;
+}
+.dark .half-circle {
+  background-color: #020617;
+}
+
+/* Premium Glow Effects */
+.glow-bg {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-bg-forest {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(6, 78, 59, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
