@@ -49,7 +49,7 @@ export default function Hero() {
                 Solusi Titip Barang #1 Mahasiswa
               </div>
               
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight text-forest">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.15] tracking-tight text-forest">
                 Titip Barang,
                 <br />
                 <motion.span 
@@ -58,7 +58,7 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-primary"
+                  className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-primary pb-2"
                 >
                   {words[currentWordIndex]}
                 </motion.span>
