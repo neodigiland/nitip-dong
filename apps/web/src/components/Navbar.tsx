@@ -29,7 +29,7 @@ export default function Navbar() {
         scrolled ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-forest/5 shadow-glass" : "bg-transparent"
       )}
     >
-      <div className="layout-container flex justify-center w-full">
+      <div className="flex justify-center w-full">
         <header className="flex w-full max-w-[1400px] items-center justify-between px-6 py-4 lg:px-12">
           <div className="flex items-center gap-3">
             {/* Mobile Burger Button */}
@@ -74,7 +74,7 @@ export default function Navbar() {
             </div>
             
             <div className="flex gap-3">
-              <Link to="/location" className="hidden sm:flex h-11 items-center justify-center rounded-2xl bg-primary px-6 text-sm font-bold text-forest shadow-soft transition-all hover:shadow-glow hover:-translate-y-0.5 active:scale-95">
+              <Link to="/location" className="hidden sm:flex h-10 items-center justify-center rounded-xl bg-primary px-6 text-sm font-bold text-forest shadow-soft transition-all hover:shadow-glow hover:-translate-y-0.5 active:scale-95">
                 <span className="truncate">Lokasi Kami</span>
               </Link>
             </div>
