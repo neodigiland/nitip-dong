@@ -1,12 +1,17 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import RevealOnScroll from '../components/RevealOnScroll';
+import Seo from '../components/Seo';
 
 export default function Pricing() {
   const [billing, setBilling] = useState('semester');
 
   return (
     <div className="flex-grow flex flex-col items-center w-full bg-slate-50">
+      <Seo 
+        title="Harga & Paket - Nitip Dong"
+        description="Pilihan paket penitipan barang mahasiswa mulai dari Rp 50rb. Tersedia paket Small, Medium, dan Large dengan diskon semesteran."
+      />
       {/* Hero Section */}
       <section className="w-full px-6 py-16 lg:py-24 flex justify-center relative overflow-hidden">
         {/* Background Glows */}

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import RevealOnScroll from '../components/RevealOnScroll';
+import Seo from '../components/Seo';
 
 interface Review {
   id: string;
@@ -73,6 +74,10 @@ export default function About() {
 
   return (
     <div className="flex-grow w-full bg-slate-50">
+      <Seo 
+        title="Tentang Kami - Nitip Dong"
+        description="Kenalan dengan Nitip Dong, solusi penitipan barang inovatif karya anak bangsa khusus untuk mahasiswa Indonesia."
+      />
       {/* Hero Section */}
       <section className="relative min-h-[500px] flex flex-col justify-center overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 bg-gradient-to-br from-forest via-forest-light to-forest" />

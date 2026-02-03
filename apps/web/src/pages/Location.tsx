@@ -1,7 +1,13 @@
 
+import Seo from '../components/Seo'
+
 export default function Location() {
   return (
     <div className="layout-container flex w-full grow flex-col max-w-[1200px] px-4 md:px-10 py-8 mx-auto">
+      <Seo 
+        title="Lokasi Kami - Nitip Dong"
+        description="Temukan lokasi gudang Nitip Dong terdekat. Kami melayani area Depok dan sekitarnya. Cek jam operasional dan peta di sini."
+      />
       {/* Breadcrumbs */}
       <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-6">
     

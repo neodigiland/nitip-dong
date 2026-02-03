@@ -1,9 +1,14 @@
 import { Link } from 'react-router-dom';
 import RevealOnScroll from '../components/RevealOnScroll';
+import Seo from '../components/Seo';
 
 export default function FAQ() {
   return (
     <div className="flex-grow w-full bg-slate-50">
+      <Seo 
+        title="FAQ - Nitip Dong"
+        description="Pusat bantuan dan tanya jawab seputar layanan Nitip Dong. Temukan solusi untuk pertanyaanmu di sini."
+      />
       {/* Hero Section */}
       <div className="relative w-full py-20 md:py-28 overflow-hidden">
         {/* Background */}

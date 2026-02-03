@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
 
+import Seo from '../components/Seo'
+
 export default function DeliveryMethod() {
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-background-light dark:bg-background-dark text-text-main dark:text-[#e0e9e0] font-display">
+      <Seo 
+        title="Metode Serah Terima - Nitip Dong"
+        description="Pilih metode pengiriman barang ke gudang: antar sendiri (gratis) atau layanan jemput (pickup service) langsung dari kosanmu."
+      />
       <div className="layout-container flex h-full grow flex-col">
         {/* Header / Navbar Placeholder */}
         <div className="w-full flex items-center p-4 lg:px-40">

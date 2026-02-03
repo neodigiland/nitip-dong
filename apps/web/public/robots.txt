@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nitip-dong.vercel.app/sitemap.xml
